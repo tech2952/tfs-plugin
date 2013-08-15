@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxAppClient.WCFService</RootNamespace>
+    <AssemblyName>TaxAppClient.WCFService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\NUnit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.DQE.SqlServer.NET20, Version=1.0.2005.1, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=1.0.2005.1, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaxApp.CalcEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\TaxApp.CalcEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxApp.IntrinsicFunctions, Version=4.0.3117.20054, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\TaxApp.IntrinsicFunctions.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxBuilder.GraphicObjects, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\TaxBuilder.GraphicObjects.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ConstantsWCFService.cs" />
+    <Compile Include="DataContracts.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxAppClientAsyncService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="SampleApplicationFiles\DataLinks.Sample_Application.2007.bin" />
+    <None Include="SampleApplicationFiles\GraphicInfoItems.Sample_Application.2007.bin" />
+    <None Include="SampleApplicationFiles\Print.Navigation.Sample_Application.2007.bin" />
+    <None Include="SampleApplicationFiles\Print.PageAndGraphics.Sample_Application.2007.Index.bin" />
+    <None Include="SampleApplicationFiles\TaxApp.CalcInfo.Sample_Application.2007.bin" />
+    <None Include="SampleApplicationFiles\TaxApp.Navigation.Sample_Application.2007.bin" />
+    <None Include="SampleApplicationFiles\TaxApp.PageAndGraphics.Sample_Application.2007.1.bin" />
+    <None Include="SampleApplicationFiles\TaxApp.PageAndGraphics.Sample_Application.2007.Index.bin" />
+    <None Include="SampleApplicationFiles\ValueList.2007.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleApplicationFiles\Scripts.Sample_Application.2007.dll" />
+    <Content Include="SampleApplicationFiles\Thomson.Sample_Application.2007.DefaultCustomLetter.Template.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaxApp.DataObjects\TestHarness.DataObjects.csproj">
+      <Project>{6D04E081-E001-400B-9355-FD91A8BD068E}</Project>
+      <Name>TestHarness.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxApp.InterfacesAndConstants\TaxApp.InterfacesAndConstants.csproj">
+      <Project>{943C93FD-BA49-4A52-A46D-C173DD386D5E}</Project>
+      <Name>TaxApp.InterfacesAndConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestHarness.BusinessObjects\TestHarness.BusinessObjects.csproj">
+      <Project>{1BD91219-8B2E-4913-B091-AFFB47917038}</Project>
+      <Name>TestHarness.BusinessObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

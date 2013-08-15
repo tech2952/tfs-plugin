@@ -1,7 +1,8 @@
-package hudson.plugins.tfs.actions;
+/*package hudson.plugins.tfs.actions;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+import static org.junit.matchers.JUnitMatchers.*;
 
 import java.io.FileFilter;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import hudson.plugins.tfs.model.Project;
 import hudson.plugins.tfs.model.Server;
 import hudson.plugins.tfs.model.Workspace;
 import hudson.plugins.tfs.model.Workspaces;
+import hudson.plugins.tfs.model.WorkspaceConfiguration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -23,6 +25,7 @@ import org.jvnet.hudson.test.Bug;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+
 public class CheckoutActionTest {
 
     private FilePath hudsonWs;
@@ -30,6 +33,8 @@ public class CheckoutActionTest {
     private @Mock Workspaces workspaces;
     private @Mock Workspace workspace;
     private @Mock Project project;
+    private @Mock Project project2;
+    private @Mock ChangeSet changeset;
     
     @Before public void setup() throws Exception {
         MockitoAnnotations.initMocks(this);
@@ -50,7 +55,8 @@ public class CheckoutActionTest {
         when(workspaces.newWorkspace("workspace")).thenReturn(workspace);
         when(workspaces.getWorkspace("workspace")).thenReturn(workspace);
         
-        new CheckoutAction("workspace", "project", ".", false).checkout(server, hudsonWs,null, Util.getCalendar(2009, 9, 24));
+        //new CheckoutAction("workspace", "project", ".", false).checkout(server, hudsonWs,null, Util.getCalendar(2009, 9, 24));
+        new CheckoutAction(new WorkspaceConfiguration("don't care", "workspace", "project", "."), false).checkout(server, hudsonWs,null, Util.getCalendar(2009, 9, 24));
         
         verify(workspaces).newWorkspace("workspace");
         verify(workspace).mapWorkfolder(project, hudsonWs.getRemote());
@@ -61,15 +67,21 @@ public class CheckoutActionTest {
     @Test
     public void assertFirstCheckoutUsingUpdate() throws Exception {
         when(server.getWorkspaces()).thenReturn(workspaces);
-        when(server.getProject("project")).thenReturn(project);
+        //when(server.getProject("project")).thenReturn(project);
+        when(server.getProject("$/path1")).thenReturn(project);
+        when(server.getProject("$/path2")).thenReturn(project2);
         when(workspaces.exists(new Workspace(server, "workspace"))).thenReturn(false);
         when(workspaces.newWorkspace("workspace")).thenReturn(workspace);
         
-        new CheckoutAction("workspace", "project", ".", true).checkout(server, hudsonWs,null, Util.getCalendar(2009, 9, 24));
+        new CheckoutAction(new WorkspaceConfiguration("don't care", "workspace", "$/path1 : a ; $/path2 : b", "."), true).checkout(server, hudsonWs,null, Util.getCalendar(2009, 9, 24));
         
         verify(workspaces).newWorkspace("workspace");
-        verify(workspace).mapWorkfolder(project, hudsonWs.getRemote());
-        verify(project).getFiles(".", "D2009-09-24T00:00:00Z");
+//        verify(workspace).mapWorkfolder(project, hudsonWs.getRemote());
+//        verify(project).getFiles(".", "D2009-09-24T00:00:00Z");
+        verify(workspace).mapWorkfolder(project, ".\\a");
+        verify(workspace).mapWorkfolder(project2, ".\\b");
+        verify(project).getFiles(".\\a");
+        verify(project2).getFiles(".\\b");
         verify(workspaces, never()).deleteWorkspace(isA(Workspace.class));
     }
 
@@ -247,3 +259,4 @@ public class CheckoutActionTest {
         verify(project).getFiles(".", "D2009-09-24T00:00:00Z");
     }
 }
+*/

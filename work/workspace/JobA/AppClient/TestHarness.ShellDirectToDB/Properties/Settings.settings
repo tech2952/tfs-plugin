@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TaxClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowState" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="ScreenResolution" Type="System.Drawing.Rectangle" Scope="User">
+      <Value Profile="(Default)">0, 0, 10, 10</Value>
+    </Setting>
+    <Setting Name="WindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">500, 500</Value>
+    </Setting>
+    <Setting Name="WindowLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="TechnicalSupportURL" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.thomson.com/taxacct/taxacct_contact_taxacct.jsp</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

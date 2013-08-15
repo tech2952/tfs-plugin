@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
+import hudson.plugins.tfs.util.ProjectPathUtil;
 
 import net.sf.json.JSONObject;
 
@@ -170,9 +171,11 @@ public class TeamFoundationServerScm extends SCM {
         }
         
         build.addAction(workspaceConfiguration);
-        CheckoutAction action = new CheckoutAction(workspaceConfiguration.getWorkspaceName(), workspaceConfiguration.getProjectPath(), workspaceConfiguration.getWorkfolder(), isUseUpdate());
+        //CheckoutAction action = new CheckoutAction(workspaceConfiguration.getWorkspaceName(), workspaceConfiguration.getProjectPath(), workspaceConfiguration.getWorkfolder(), isUseUpdate());
+        CheckoutAction action = new CheckoutAction(workspaceConfiguration, isUseUpdate());
         try {
-            List<ChangeSet> list = action.checkout(server, workspaceFilePath, (build.getPreviousBuild() != null ? build.getPreviousBuild().getTimestamp() : null), build.getTimestamp());
+            //List<ChangeSet> list = action.checkout(server, workspaceFilePath, (build.getPreviousBuild() != null ? build.getPreviousBuild().getTimestamp() : null), build.getTimestamp());
+            List<ChangeSet> list = action.checkout(server, workspaceFilePath, build.getPreviousBuild() != null ? build.getPreviousBuild().getTimestamp() : null, build.getTimestamp());
             ChangeSetWriter writer = new ChangeSetWriter();
             writer.write(list, changelogFile);
         } catch (ParseException pe) {
@@ -180,20 +183,20 @@ public class TeamFoundationServerScm extends SCM {
             throw new AbortException();
         }
 
-        try {
+        //try {
             setWorkspaceChangesetVersion(null);
             String projectPath = workspaceConfiguration.getProjectPath();
             Project project = server.getProject(projectPath);
             // TODO: even better would be to call this first, then use the changeset when calling checkout
-            int buildChangeset = project.getRemoteChangesetVersion(build.getTimestamp());
-            setWorkspaceChangesetVersion(Integer.toString(buildChangeset, 10));
+            //int buildChangeset = project.getRemoteChangesetVersion(build.getTimestamp());
+            //setWorkspaceChangesetVersion(Integer.toString(buildChangeset, 10));
             
             // by adding this action, we prevent calcRevisionsFromBuild() from being called
-            build.addAction(new TFSRevisionState(buildChangeset, projectPath));
-        } catch (ParseException pe) {
-            listener.fatalError(pe.getMessage());
-            throw new AbortException();
-        }
+            //build.addAction(new TFSRevisionState(buildChangeset, projectPath));
+        //} catch (ParseException pe) {
+          //  listener.fatalError(pe.getMessage());
+            //throw new AbortException();
+        //}
 
         return true;
     }
@@ -210,10 +213,18 @@ public class TeamFoundationServerScm extends SCM {
         } else {
             Server server = createServer(new TfTool(getDescriptor().getTfExecutable(), launcher, listener, workspace), lastRun);
             try {
-                return (server.getProject(getProjectPath(lastRun)).getDetailedHistory(
-                            lastRun.getTimestamp(), 
-                            Calendar.getInstance()
-                        ).size() > 0);
+                for(String projectPath : ProjectPathUtil.getProjectPaths(getProjectPath(lastRun)))
+                {
+                    if(server.getProject(projectPath).getDetailedHistory(
+                             lastRun.getTimestamp(), 
+                             Calendar.getInstance()
+                          ).size() > 0)
+                    {
+                      return true;
+                    }
+                }
+                return false;
+                
             } catch (ParseException pe) {
                 listener.fatalError(pe.getMessage());
                 throw new AbortException();
@@ -326,7 +337,8 @@ public class TeamFoundationServerScm extends SCM {
         public static final Pattern WORKSPACE_NAME_REGEX = Pattern.compile("[^\"/:<>\\|\\*\\?]+[^\\s\\.\"/:<>\\|\\*\\?]$", Pattern.CASE_INSENSITIVE);
         public static final Pattern USER_AT_DOMAIN_REGEX = Pattern.compile("^([^\\/\\\\\"\\[\\]:|<>+=;,\\*@]+)@([a-z][a-z0-9.-]+)$", Pattern.CASE_INSENSITIVE);
         public static final Pattern DOMAIN_SLASH_USER_REGEX = Pattern.compile("^([a-z][a-z0-9.-]+)\\\\([^\\/\\\\\"\\[\\]:|<>+=;,\\*@]+)$", Pattern.CASE_INSENSITIVE);
-        public static final Pattern PROJECT_PATH_REGEX = Pattern.compile("^\\$\\/.*", Pattern.CASE_INSENSITIVE);
+        //public static final Pattern PROJECT_PATH_REGEX = Pattern.compile("^\\$\\/.*", Pattern.CASE_INSENSITIVE);
+        public static final Pattern PROJECT_PATH_REGEX = Pattern.compile("^\\$\\/[^:;]*(\\s*:[^;]+)?(;\\s*\\$\\/[^:;]*(\\s*:[^;]+)?)*$", Pattern.CASE_INSENSITIVE);
         private String tfExecutable;
         
         public DescriptorImpl() {
@@ -397,7 +409,7 @@ public class TeamFoundationServerScm extends SCM {
 
         @Override
         public String getDisplayName() {
-            return "Team Foundation Server";
+            return "Team Foundation Server Multi-Paths";
         }
     }
 

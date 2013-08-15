@@ -1,0 +1,10 @@
+Log Started: 8/26/2010 3:09:17 PM
+Debug: true
+Database Name: "PATRICKHENRY"
+Server Name: "(local)\sqlexpress"
+User Name: sa
+Password is populated
+Use Trusted: true
+Source Dir: D:\Thomson\TaxBuilder\Database\TestHarness\
+Flags: 11010
+"D:\Thomson\TaxBuilder\Database\TestHarness\InstallDatabasePatrickHenry.vbs" "(local)\sqlexpress" "PATRICKHENRY" "D:\Thomson\TaxBuilder\Database\TestHarness\" "D:\Thomson\TaxBuilder\Database\TestHarness" "11010" "sa" "password"

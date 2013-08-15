@@ -111,7 +111,7 @@ public class Project {
                                                                                        throws IOException, 
                                                                                               InterruptedException, 
                                                                                               ParseException {
-        WorkspaceChangesetVersionCommand command = new WorkspaceChangesetVersionCommand(server,localPath,workspaceName, workspaceOwner);
+        WorkspaceChangesetVersionCommand command = new WorkspaceChangesetVersionCommand(server,projectPath,workspaceName, workspaceOwner);
         Reader reader = null;
         try {
             reader = server.execute(command.getArguments());
@@ -130,7 +130,7 @@ public class Project {
      */
     public int getRemoteChangesetVersion(String remotePath, Calendar toTimestamp)
             throws IOException, InterruptedException, ParseException {
-        RemoteChangesetVersionCommand command = new RemoteChangesetVersionCommand(server, remotePath, toTimestamp);
+        RemoteChangesetVersionCommand command = new RemoteChangesetVersionCommand(server, projectPath, toTimestamp);
         Reader reader = null;
         try {
             reader = server.execute(command.getArguments());

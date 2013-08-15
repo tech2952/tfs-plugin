@@ -1,0 +1,137 @@
+Started by user anonymous
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspaces -format:brief -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+Collection: http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection
+Workspace                   Owner       Computer     Comment
+--------------------------- ----------- ------------ --------------------------
+Hudson-JOB1-MASTER          ta-s-dthome U0170931-W7A 
+Hudson-JobA-MASTER          ta-s-dthome U0170931-W7A 
+Hudson-test tfs 2012-MASTER ta-s-dthome U0170931-W7A 
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspace -delete Hudson-JobA-MASTER;TLR\ta-s-dthome -noprompt -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspace -new Hudson-JobA-MASTER;TLR\ta-s-dthome -noprompt -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/REST .\./Rest -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./Rest -recursive -noprompt ********
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA:
+Getting Rest
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest:
+Getting CommonAssemblyInfo.cs
+Getting dev.rb
+Getting Libraries
+Getting Rakefile.rb
+Getting REST
+Getting REST.sln
+Getting REST.suo
+Getting REST.Tests
+Getting REST.vssscc
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\Libraries:
+Getting log4net.dll
+Getting Nancy.dll
+Getting Nancy.Hosting.Self.dll
+Getting Newtonsoft.Json.dll
+Getting NUnit
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\Libraries\NUnit:
+Getting agent.conf
+Getting agent.log.conf
+Getting framework
+Getting launcher.log.conf
+Getting lib
+Getting nunit.exe.config
+Getting nunit.framework.dll
+Getting nunit-agent.exe
+Getting nunit-agent.exe.config
+Getting nunit-agent-x86.exe
+Getting nunit-agent-x86.exe.config
+Getting nunit-console.exe
+Getting nunit-console.exe.config
+Getting nunit-console-x86.exe
+Getting nunit-console-x86.exe.config
+Getting NUnitFitTests.html
+Getting NUnitTests.config
+Getting NUnitTests.nunit
+Getting nunit-x86.exe
+Getting nunit-x86.exe.config
+Getting pnunit.framework.dll
+Getting pnunit.tests.dll
+Getting pnunit-agent.exe
+Getting pnunit-launcher.exe
+Getting pnunit-launcher.exe.config
+Getting runFile.exe
+Getting runFile.exe.config
+Getting test.conf
+Getting tests
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\Libraries\NUnit\framework:
+Getting nunit.framework.dll
+Getting nunit.framework.xml
+Getting nunit.mocks.dll
+Getting pnunit.framework.dll
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\Libraries\NUnit\lib:
+Getting Failure.png
+Getting fit.dll
+Getting Ignored.png
+Getting Inconclusive.png
+Getting log4net.dll
+Getting nunit.core.dll
+Getting nunit.core.interfaces.dll
+Getting nunit.fixtures.dll
+Getting nunit.uiexception.dll
+Getting nunit.uikit.dll
+Getting nunit.util.dll
+Getting nunit-console-runner.dll
+Getting nunit-gui-runner.dll
+Getting Skipped.png
+Getting Success.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\Libraries\NUnit\tests:
+Getting loadtest-assembly.dll
+Getting mock-assembly.dll
+Getting nonamespace-assembly.dll
+Getting nunit.core.tests.dll
+Getting nunit.fixtures.tests.dll
+Getting nunit.framework.dll
+Getting nunit.framework.tests.dll
+Getting nunit.mocks.tests.dll
+Getting nunit.uiexception.tests.dll
+Getting nunit.uikit.tests.dll
+Getting nunit.util.tests.dll
+Getting nunit-console.tests.dll
+Getting nunit-gui.tests.dll
+Getting test-assembly.dll
+Getting test-utilities.dll
+Getting timing-tests.dll
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\REST:
+Getting JsonToDynamic.cs
+Getting Properties
+Getting REST.csproj
+Getting REST.csproj.vspscc
+Getting RestFacilitator.cs
+Getting StatsService.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\REST\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\REST.Tests:
+Getting JsonToDynamicSpecification.cs
+Getting Properties
+Getting RequestCallback.cs
+Getting REST.Tests.csproj
+Getting REST.Tests.csproj.vspscc
+Getting RestFacilitatorSpecification.cs
+Getting StatsServiceSpec.cs
+Getting TestBootstrapper.cs
+Getting TestModule.cs
+Getting TestService.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Rest\REST.Tests\Properties:
+Getting AssemblyInfo.cs
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/REST -noprompt -version:D2013-08-13T18:59:00Z~D2013-08-13T19:01:12Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history "$/TaxBuilder/Mainline/REST : ./Rest;" -recursive -stopafter:1 -noprompt -version:D2013-08-13T19:01:12Z -format:brief ******** -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection
+Please provide a version specification.
+FATAL: Executable returned an unexpected result code [100]
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mERROR: null
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: FAILURE

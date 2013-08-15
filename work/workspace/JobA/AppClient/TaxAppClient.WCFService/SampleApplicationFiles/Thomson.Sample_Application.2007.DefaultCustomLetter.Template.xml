@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" PlacementPosition="After" PlacementOrder="0">
+  <PageProperties Orientation="Portrait" Comment="Use this space for a description of the letter, places to be used, general information that will not show up when this page is printed" Font="[Font: Name=Arial, Size=12, Units=3, GdiCharSet=1, GdiVerticalFont=False, Style=Regular]" TemplateName="Custom Letter" />
+  <AvailableMappables>
+    <MappedVariable>
+      <Name>@Pages@</Name>
+      <Description>Number of printed pages.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Forms@</Name>
+      <Description>Number of printed forms.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Whitepaper@</Name>
+      <Description>Number of printed white papers.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Attachments@</Name>
+      <Description>Number of printed attachments.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Locator@</Name>
+      <Description>Name of the Locator.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Account@</Name>
+      <Description>The account code of the locator.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Job@</Name>
+      <Description>The job number.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@Rounding@</Name>
+      <Description>Rounding</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@AppPrefix@</Name>
+      <Description>The application prefix</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@TaxYear@</Name>
+      <Description>The application's tax year.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@JobStart@</Name>
+      <Description>The job start time.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@JobEnd@</Name>
+      <Description>The job end time.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@TaxPayerName@</Name>
+      <Description>The name of the taxpayer.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+    <MappedVariable>
+      <Name>@FiscalYearEnd@</Name>
+      <Description>The fiscal year end date.</Description>
+      <Area>0</Area>
+      <Screen>0</Screen>
+      <Field>0</Field>
+      <Level>0</Level>
+    </MappedVariable>
+  </AvailableMappables>
+  <Labels />
+  <Images />
+</Page>

@@ -1,0 +1,118 @@
+--- !ruby/object:Package 
+name: RuntimeClient
+solutions: 
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: AppRuntime
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.CalcEngine
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.IntrinsicFunctions
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: TaxBuilder
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.BusinessLogic
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.FTCommonMCProxy
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.WCFProxy
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.AppPrintProperties
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.DataObjects
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.FadsLib
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.GraphicObjects
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.ITaxBuilderData
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: AppClient
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.InterfacesAndConstants
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: PrintClient
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: GenPrintModule
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: PrintDataModule
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: ShellApplication
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxFormRendering
+    shouldDeploy: true

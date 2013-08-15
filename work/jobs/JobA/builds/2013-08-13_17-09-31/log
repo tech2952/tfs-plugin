@@ -1,0 +1,1413 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspaces -format:brief -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+Collection: http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection
+Workspace                   Owner       Computer     Comment
+--------------------------- ----------- ------------ --------------------------
+Hudson-JOB1-MASTER          ta-s-dthome U0170931-W7A 
+Hudson-JobA-MASTER          ta-s-dthome U0170931-W7A 
+Hudson-test tfs 2012-MASTER ta-s-dthome U0170931-W7A 
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspace -delete Hudson-JobA-MASTER;TLR\ta-s-dthome -noprompt -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workspace -new Hudson-JobA-MASTER;TLR\ta-s-dthome -noprompt -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/Jenkins/JenkinsConnectionInfo .\./AppClient/JenkinsConnectionInfo -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/TaxBuilder/AppClient .\./AppClient -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/TaxBuilder/Database .\./Database -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/TaxBuilder/Libraries .\./Libraries -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" workfold -map $/TaxBuilder/Mainline/TaxBuilder/BuildAndDeploy/JobFiles .\./BuildAndDeploy/JobFiles -workspace:Hudson-JobA-MASTER -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./AppClient/JenkinsConnectionInfo -recursive -noprompt ********
+All files are up to date.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/Jenkins/JenkinsConnectionInfo -noprompt -version:D2013-08-13T20:57:35Z~D2013-08-13T22:09:32Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./AppClient -recursive -noprompt ********
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA:
+Getting AppClient
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient:
+Getting AppClient.sln
+Getting AppClient.vssscc
+Getting CommonAssemblyInfo.cs
+Getting Rakefile
+Getting TaxApp.DataObjects
+Getting TaxApp.InterfacesAndConstants
+Getting TaxApp.WinformRuntimeGraphics
+Getting TaxAppClient.BusinessObjects
+Getting TaxAppClient.Shell
+Getting TaxAppClient.WCFService
+Getting TaxAppClient.WCFServiceHost
+Getting TestHarness.BusinessObjects
+Getting TestHarness.CABModule
+Getting TestHarness.Fitness
+Getting TestHarness.ShellDirectToDB
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects:
+Getting App.config
+Getting CollectionClasses
+Getting ConstantsEnums.cs
+Getting DaoClasses
+Getting EntityClasses
+Getting FactoryClasses
+Getting HelperClasses
+Getting Properties
+Getting RelationClasses
+Getting StoredProcedureCallerClasses
+Getting TestHarness.DataObjects.csproj
+Getting TestHarness.DataObjects.csproj.vspscc
+Getting ValidatorClasses
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\CollectionClasses:
+Getting ClientCollection.cs
+Getting ClientCustomerCollection.cs
+Getting ClientLocatorCollection.cs
+Getting CustomerLocatorAuthorizationCollection.cs
+Getting CustomerNameCollection.cs
+Getting CustomerNamespaceAuthorizationCollection.cs
+Getting Enterprise_InformationCollection.cs
+Getting Enum_AuthorizationTypeCollection.cs
+Getting Enum_DataSourceCollection.cs
+Getting Enum_DataTypeCollection.cs
+Getting FirmCollection.cs
+Getting LocatorCollection.cs
+Getting LocatorGridRowCollection.cs
+Getting LocatorNodeComputedValueCollection.cs
+Getting LocatorObjectRecordCollection.cs
+Getting LocatorObjectValueCollection.cs
+Getting LocatorRolloverCollection.cs
+Getting TempComputedResultsCollection.cs
+Getting TempComputeFieldsCollection.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\DaoClasses:
+Getting ClientCustomerDAO.cs
+Getting ClientDAO.cs
+Getting ClientLocatorDAO.cs
+Getting CustomerLocatorAuthorizationDAO.cs
+Getting CustomerNameDAO.cs
+Getting CustomerNamespaceAuthorizationDAO.cs
+Getting Enterprise_InformationDAO.cs
+Getting Enum_AuthorizationTypeDAO.cs
+Getting Enum_DataSourceDAO.cs
+Getting Enum_DataTypeDAO.cs
+Getting FirmDAO.cs
+Getting LocatorDAO.cs
+Getting LocatorGridRowDAO.cs
+Getting LocatorNodeComputedValueDAO.cs
+Getting LocatorObjectRecordDAO.cs
+Getting LocatorObjectValueDAO.cs
+Getting LocatorRolloverDAO.cs
+Getting TempComputedResultsDAO.cs
+Getting TempComputeFieldsDAO.cs
+Getting TypedListDAO.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\EntityClasses:
+Getting ClientCustomerEntity.cs
+Getting ClientEntity.cs
+Getting ClientLocatorEntity.cs
+Getting CustomerLocatorAuthorizationEntity.cs
+Getting CustomerNameEntity.cs
+Getting CustomerNamespaceAuthorizationEntity.cs
+Getting Enterprise_InformationEntity.cs
+Getting Enum_AuthorizationTypeEntity.cs
+Getting Enum_DataSourceEntity.cs
+Getting Enum_DataTypeEntity.cs
+Getting FirmEntity.cs
+Getting LocatorEntity.cs
+Getting LocatorGridRowEntity.cs
+Getting LocatorNodeComputedValueEntity.cs
+Getting LocatorObjectRecordEntity.cs
+Getting LocatorObjectValueEntity.cs
+Getting LocatorRolloverEntity.cs
+Getting TempComputedResultsEntity.cs
+Getting TempComputeFieldsEntity.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\FactoryClasses:
+Getting DaoFactory.cs
+Getting EntityFactories.cs
+Getting EntityFieldFactory.cs
+Getting EntityFieldsFactory.cs
+Getting PredicateFactory.cs
+Getting PropertyDescriptorFactory.cs
+Getting SortClauseFactory.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\HelperClasses:
+Getting DbUtils.cs
+Getting DbUtilsComPlus.cs
+Getting FieldCreationClasses.cs
+Getting InheritanceInfoProvider.cs
+Getting ResultsetFields.cs
+Getting Transaction.cs
+Getting TransactionComPlus.cs
+Getting TypeDefaultValue.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\RelationClasses:
+Getting ClientCustomerRelations.cs
+Getting ClientLocatorRelations.cs
+Getting ClientRelations.cs
+Getting CustomerLocatorAuthorizationRelations.cs
+Getting CustomerNameRelations.cs
+Getting CustomerNamespaceAuthorizationRelations.cs
+Getting Enterprise_InformationRelations.cs
+Getting Enum_AuthorizationTypeRelations.cs
+Getting Enum_DataSourceRelations.cs
+Getting Enum_DataTypeRelations.cs
+Getting FirmRelations.cs
+Getting LocatorGridRowRelations.cs
+Getting LocatorNodeComputedValueRelations.cs
+Getting LocatorObjectRecordRelations.cs
+Getting LocatorObjectValueRelations.cs
+Getting LocatorRelations.cs
+Getting LocatorRolloverRelations.cs
+Getting TempComputedResultsRelations.cs
+Getting TempComputeFieldsRelations.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\StoredProcedureCallerClasses:
+Getting ActionProcedures.cs
+Getting RetrievalProcedures.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.DataObjects\ValidatorClasses:
+Getting ClientCustomerValidator.cs
+Getting ClientLocatorValidator.cs
+Getting ClientValidator.cs
+Getting CustomerLocatorAuthorizationValidator.cs
+Getting CustomerNamespaceAuthorizationValidator.cs
+Getting CustomerNameValidator.cs
+Getting Enterprise_InformationValidator.cs
+Getting Enum_AuthorizationTypeValidator.cs
+Getting Enum_DataSourceValidator.cs
+Getting Enum_DataTypeValidator.cs
+Getting FirmValidator.cs
+Getting LocatorGridRowValidator.cs
+Getting LocatorNodeComputedValueValidator.cs
+Getting LocatorObjectRecordValidator.cs
+Getting LocatorObjectValueValidator.cs
+Getting LocatorRolloverValidator.cs
+Getting LocatorValidator.cs
+Getting TempComputedResultsValidator.cs
+Getting TempComputeFieldsValidator.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.InterfacesAndConstants:
+Getting ClientIDAndNameWithLocatorDictionary.cs
+Getting ConstantsInInterface.cs
+Getting DatabaseAndBinaryPathSettings.cs
+Getting Interfaces.cs
+Getting LocatorInfo.cs
+Getting NewEntryOnAGroupLoopNode.cs
+Getting PageUpdatedEventHandler.cs
+Getting Properties
+Getting RunTimeNode.cs
+Getting RunTimePage.cs
+Getting StaticHelperMethods.cs
+Getting TaxApp.InterfacesAndConstants.csproj
+Getting TaxApp.InterfacesAndConstants.csproj.vspscc
+Getting Tests
+Getting UserConfigurationItems.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.InterfacesAndConstants\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.InterfacesAndConstants\Tests:
+Getting TIApplicationInfo.cs
+Getting TILocatorDatabase.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.WinformRuntimeGraphics:
+Getting BarcodeImageGraphicRT.cs
+Getting BarcodeImageGraphicRT.resx
+Getting CheckBoxGraphicRT.cs
+Getting CheckBoxGraphicRT.resx
+Getting DropDownListGraphicRT.cs
+Getting DropDownListGraphicRT.resx
+Getting EntityGroupGraphicRT.cs
+Getting FrameGraphicRT.cs
+Getting FrameGraphicRT.resx
+Getting GridGraphicRT.cs
+Getting GridGraphicRT.resx
+Getting GroupGraphicRT.cs
+Getting HyperLinkGraphicRT.cs
+Getting LabelGraphicRT.cs
+Getting LabelGraphicRT.resx
+Getting LineGraphicRT.cs
+Getting LinkLabelGraphicRT.cs
+Getting MaskedTextBoxGraphicRT.cs
+Getting MaskedTextBoxGraphicRT.designer.cs
+Getting OptionButtonGraphicRT.cs
+Getting OptionButtonGraphicRT.Designer.cs
+Getting OptionGroupGraphicRT.cs
+Getting OptionGroupGraphicRT.resx
+Getting ParsedValueGroupGraphicRT.cs
+Getting PictureBoxRT.cs
+Getting Properties
+Getting PushButtonGraphicRT.cs
+Getting PushButtonGraphicRT.resx
+Getting RunTimeControlUtilities.cs
+Getting RunTimeGraphicObjectTests.cs
+Getting TaxApp.WinformRuntimeGraphics.csproj
+Getting TaxApp.WinformRuntimeGraphics.csproj.vspscc
+Getting TextBoxDataUitl.cs
+Getting TextBoxGraphicRT.cs
+Getting TextBoxGraphicRT.resx
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxApp.WinformRuntimeGraphics\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.BusinessObjects:
+Getting App.config
+Getting Properties
+Getting TACCallBack.cs
+Getting TaxAppClient.BusinessObjects.csproj
+Getting TaxAppClient.BusinessObjects.csproj.vspscc
+Getting TaxAppClient.WCFServiceClient.cs
+Getting TaxAppClientData.cs
+Getting TaxAppData.cs
+Getting TaxAppInfo.cs
+Getting WCFServiceClientOverrides.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.BusinessObjects\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell:
+Getting App.config
+Getting Controls
+Getting ProfileCatalog.TestHarness.xml
+Getting ProfileCatalog.xml
+Getting Properties
+Getting Resources
+Getting ShellApplication.cs
+Getting ShellMainForm.cs
+Getting ShellMainForm.designer.cs
+Getting ShellMainForm.resx
+Getting TaxAppClient.Shell.csproj
+Getting TaxAppClient.Shell.csproj.vspscc
+Getting WorkItems
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\Controls:
+Getting AboutBox1.cs
+Getting AboutBox1.designer.cs
+Getting AboutBox1.resx
+Getting SplashScreen.cs
+Getting SplashScreen.resx
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\Properties:
+Getting AssemblyInfo.cs
+Getting Resources.Designer.cs
+Getting Resources.resx
+Getting Settings.Designer.cs
+Getting Settings.settings
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\Resources:
+Getting cubes_green.png
+Getting cubes_yellow.png
+Getting nav_plain_blue.png
+Getting nav_plain_green.png
+Getting nav_plain_red.png
+Getting text_tree.png
+Getting user1_telephone16.png
+Getting user1_telephone48.png
+Getting window_earth.png
+Getting window_gear.png
+Getting window_view.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\WorkItems:
+Getting Main
+Getting Support
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\WorkItems\Main:
+Getting ShellWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.Shell\WorkItems\Support:
+Getting SupportView.cs
+Getting SupportView.designer.cs
+Getting SupportView.resx
+Getting SupportWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFService:
+Getting App.config
+Getting ConstantsWCFService.cs
+Getting DataContracts.cs
+Getting Main.cs
+Getting Properties
+Getting SampleApplicationFiles
+Getting TaxAppClient.WCFService.csproj
+Getting TaxAppClient.WCFService.csproj.vspscc
+Getting TaxAppClientAsyncService.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFService\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFService\SampleApplicationFiles:
+Getting DataLinks.Sample_Application.2007.bin
+Getting GraphicInfoItems.Sample_Application.2007.bin
+Getting Print.Navigation.Sample_Application.2007.bin
+Getting Print.PageAndGraphics.Sample_Application.2007.Index.bin
+Getting Scripts.Sample_Application.2007.dll
+Getting TaxApp.CalcInfo.Sample_Application.2007.bin
+Getting TaxApp.Navigation.Sample_Application.2007.bin
+Getting TaxApp.PageAndGraphics.Sample_Application.2007.1.bin
+Getting TaxApp.PageAndGraphics.Sample_Application.2007.Index.bin
+Getting Thomson.Sample_Application.2007.DefaultCustomLetter.Template.xml
+Getting ValueList.2007.bin
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFServiceHost:
+Getting App.config
+Getting Program.cs
+Getting Properties
+Getting Resources
+Getting ServiceHost.cs
+Getting TaxAppClient.WCFServiceHost.csproj
+Getting TaxAppClient.WCFServiceHost.csproj.vspscc
+Getting TaxAppClient.WCFServiceHost.exe.Manifest
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFServiceHost\Properties:
+Getting AssemblyInfo.cs
+Getting Resources.Designer.cs
+Getting Resources.resx
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TaxAppClient.WCFServiceHost\Resources:
+Getting gear.ico
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.BusinessObjects:
+Getting App.config
+Getting ApplicationInfoRetrieverFromTaxBuilderDesignDB.cs
+Getting ClientImpl.cs
+Getting CustomerImpl.cs
+Getting DatabaseInitializer.cs
+Getting DesignDatabaseConnectionSwitcher.cs
+Getting DesignProductYearImpl.cs
+Getting LocatorImpl.cs
+Getting Properties
+Getting TestHarness.BusinessObjects.csproj
+Getting TestHarness.BusinessObjects.csproj.vspscc
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.BusinessObjects\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule:
+Getting App.config
+Getting Constants.cs
+Getting Controls
+Getting Images.Designer.cs
+Getting Images.resx
+Getting Properties
+Getting Resources
+Getting StatusUpdateEventArgs.cs
+Getting TestHarness.CABModule.csproj
+Getting TestHarness.CABModule.csproj.vspscc
+Getting TestHarnessCABModuleInit.cs
+Getting WorkItems
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\Controls:
+Getting DialogNewLocator.cs
+Getting DialogNewLocator.resx
+Getting DialogUserConfigurationSettings.cs
+Getting DialogUserConfigurationSettings.resx
+Getting LocatorsTreeForm.cs
+Getting LocatorsTreeForm.designer.cs
+Getting LocatorsTreeForm.resx
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\Properties:
+Getting AssemblyInfo.cs
+Getting licenses.licx
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\Resources:
+Getting books.ico
+Getting businessmen.ico
+Getting DataLink.bmp
+Getting delete.png
+Getting document_new.png
+Getting gear_run.png
+Getting gear_stop.png
+Getting ImageOpen.bmp
+Getting OpenFolder.bmp
+Getting OverrideIndicatorBlue.bmp
+Getting OverrideIndicatorRed.bmp
+Getting paperclip.png
+Getting preferences.png
+Getting Print.bmp
+Getting ShortCut.bmp
+Getting ZoomIn.bmp
+Getting ZoomOut.bmp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\WorkItems:
+Getting Main
+Getting Navigation
+Getting Page
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\WorkItems\Main:
+Getting MainWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\WorkItems\Navigation:
+Getting NavigationController.cs
+Getting NavigationView.cs
+Getting NavigationView.designer.cs
+Getting NavigationView.resx
+Getting NavigationWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.CABModule\WorkItems\Page:
+Getting PageController.cs
+Getting PageSurfaceView.cs
+Getting PageSurfaceView.resx
+Getting PageView.cs
+Getting PageView.designer.cs
+Getting PageView.resx
+Getting PageWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.Fitness:
+Getting App.config
+Getting CleanScriptsAndDLL.cs
+Getting CompileScripts.cs
+Getting ConfirmConnection.cs
+Getting CreateField.cs
+Getting CreateScript.cs
+Getting CreateScriptThreeParms.cs
+Getting DesignDatabaseSecurityCheck.cs
+Getting FitnessHelpers.cs
+Getting PositionField.cs
+Getting Properties
+Getting RunScript.cs
+Getting SetMappings.cs
+Getting TestHarness.Fitness.csproj
+Getting TestHarness.Fitness.csproj.vspscc
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.Fitness\Properties:
+Getting AssemblyInfo.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB:
+Getting App.config
+Getting Controls
+Getting cubes_green.ico
+Getting ProfileCatalog.xml
+Getting Properties
+Getting Resources
+Getting ShellApplication.cs
+Getting ShellForm.cs
+Getting ShellForm.designer.cs
+Getting ShellForm.resx
+Getting TestHarness.ShellDirectToDB.csproj
+Getting TestHarness.ShellDirectToDB.csproj.vspscc
+Getting WorkItems
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\Controls:
+Getting AboutBox1.cs
+Getting AboutBox1.designer.cs
+Getting AboutBox1.resx
+Getting LogPanel.cs
+Getting LogPanel.designer.cs
+Getting LogPanel.resx
+Getting SplashScreen.cs
+Getting SplashScreen.resx
+Getting TextBoxWriter.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\Properties:
+Getting AssemblyInfo.cs
+Getting Resources.Designer.cs
+Getting Resources.resx
+Getting Settings.Designer.cs
+Getting Settings.settings
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\Resources:
+Getting cubes_green.png
+Getting cubes_yellow.png
+Getting nav_plain_blue.png
+Getting nav_plain_green.png
+Getting nav_plain_red.png
+Getting text_tree.png
+Getting user1_telephone16.png
+Getting user1_telephone48.png
+Getting window_earth.png
+Getting window_gear.png
+Getting window_view.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\WorkItems:
+Getting Shell
+Getting Support
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\WorkItems\Shell:
+Getting ShellWorkItem.cs
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\AppClient\TestHarness.ShellDirectToDB\WorkItems\Support:
+Getting SupportView.cs
+Getting SupportView.designer.cs
+Getting SupportView.resx
+Getting SupportWorkItem.cs
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/TaxBuilder/AppClient -noprompt -version:D2013-08-13T20:57:35Z~D2013-08-13T22:09:32Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./Database -recursive -noprompt ********
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA:
+Getting Database
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database:
+Getting ApplicationDeployment
+Getting ConversionTool
+Getting LocalArchive
+Getting ReleaseControl
+Getting TaxApp Conversion
+Getting TaxBuilder
+Getting TaxClient
+Getting TestHarness
+Getting UserDefinedDatatypes.sql
+Getting UserDefinedFunctions.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\ApplicationDeployment:
+Getting DeleteScriptsAndAddAlwaysPrintToRuntimeNodes.sql
+Getting Execute spDeleteSpecifiedProduct.sql
+Getting spDelete_SpecifiedProduct.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\ConversionTool:
+Getting spConversionToolGraphicsAddedDeletedByCount.sql
+Getting spConversionToolPagesAddedDeletedByCount.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\LocalArchive:
+Getting CallDatabaseInstall-LocalArchive.vbs
+Getting InstallDatabaseLocalArchive.vbs
+Getting LocalArchive.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\ReleaseControl:
+Getting backup_restored_releases.ps1
+Getting backup_restored_releases_2.ps1
+Getting cleanup_temp_releases.bat
+Getting relocate_restored_backup_files_to_archive.bat
+Getting usp_backupdb.sql
+Getting usp_backupdb_with_info.sql
+Getting usp_backupreleasedb.sql
+Getting usp_restoredb.sql
+Getting ZipRelocate.bat
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxApp Conversion:
+Getting FadsConstraints.xml
+Getting TaxAppConversionProcs.sql
+Getting TaxAppConversionTables.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder:
+Getting 1_Table_Log.sql
+Getting 2_Table_LargeObjectArchive.sql
+Getting 3_Trigger_Update_LargeObject.sql
+Getting AddImageOverrideHistoryTable.sql
+Getting CallDatabaseInstall - Revere.vbs
+Getting Create MetadataDB.sql
+Getting Create MetadataDB_Local.sql
+Getting InstallDatabaseRevere.vbs
+Getting InstallTaxBuilderImageDatabase.vbs
+Getting LLBLGen Project
+Getting MY Procs
+Getting Post-conversion scripts
+Getting procs.sql
+Getting ProductionUpgrades
+Getting ResetIdentitySeeds.sql
+Getting Rollover Images and Assignments.sql
+Getting Stored Procedures
+Getting tables.sql
+Getting TaxBuilderDesignerImageTables.sql
+Getting UserDefinedDatatypes.sql
+Getting UserDefinedFunctions.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder\LLBLGen Project:
+Getting Revere.lgp
+Getting TaxBuilderImageDatabase.lgp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder\MY Procs:
+Getting dbdeletes.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder\Post-conversion scripts:
+Getting 08-EliminateOverlaidFields2.sql
+Getting 709 cleanup items.sql
+Getting 990 cleanup items.sql
+Getting BatchPostConversionScript.sql
+Getting ChangeFormsWithNestedGroupsToReports.sql
+Getting ReplaceAttachmentTitleWithTemplateTitle.sql
+Getting TFS63589 - RemoveLogicFromPrintIFDataOnRow.sql
+Getting UpdateCUSIPEIN labels.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder\ProductionUpgrades:
+Getting CumulativeUpgrade2009to2010.sql
+Getting LockoutUsers.sql
+Getting ManifestEditorXMLLookupqueries.sql
+Getting PurgePages.sql
+Getting Rollover Images and Assignments.sql
+Getting UnlockUsers.sql
+Getting Update_Enterprise_Information.sql
+Getting UpdateRolledOverWMFAssignmentsToLatest.sql
+Getting Upgrade 303 to 400.sql
+Getting Upgrade411T0412 - NewProcs.sql
+Getting Upgrade411To412 - TFS60608 (Enums).sql
+Getting Upgrade411To412 - TFS60608 (Headers and Footers).sql
+Getting Upgrade411To412 - UpdatedProcs.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxBuilder\Stored Procedures:
+Getting spAudit_NewerVersionOfFormsExist.sql
+Getting spConversionToolPagesAddedDeleted.sql
+Getting spGet_Attachments_Without_AttachLabel.sql
+Getting spGet_CodeScriptBySignature.sql
+Getting spGet_CodeScriptParmMappingsCount.sql
+Getting spGet_Graphic_ID_of_Graphics_Without_FADS_Field_Property.sql
+Getting spGet_Overlapping_Graphics.sql
+Getting spGet_Relational_Groups_Without_Child_Objects.sql
+Getting spGetCodeScriptParms.sql
+Getting spUsp_BackupDb_With_Info.sql
+Getting spUsp_RestoreDb.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TaxClient:
+Getting TaxClient.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TestHarness:
+Getting CallDatabaseInstall - Patrick Henry.vbs
+Getting InstallDatabasePatrickHenry.vbs
+Getting LLBLGen Project
+Getting PATRICKHENRY_Call_Database_Install.txt
+Getting PatrickHenry_Database_Install.txt
+Getting PatrickHenry_Procs.txt
+Getting PatrickHenry_Tables.txt
+Getting StoredProcedures
+Getting TaxBuilderRuntimeProcs.sql
+Getting TaxBuilderRuntimeTables.sql
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TestHarness\LLBLGen Project:
+Getting TestHarness.lgp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Database\TestHarness\StoredProcedures:
+Getting PopulateSampleAppTaxData With LocatorGridRow table.sql
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/TaxBuilder/Database -noprompt -version:D2013-08-13T20:57:35Z~D2013-08-13T22:09:32Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./Libraries -recursive -noprompt ********
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA:
+Getting Libraries
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries:
+Getting cletters.dll
+Getting ClientSides.dll
+Getting cscabsv.dll
+Getting Dapper.dll
+Getting Dapper.pdb
+Getting Dapper.XML
+Getting dotNET
+Getting fit.dll
+Getting FitLibrary.dll
+Getting FluentAssertions.dll
+Getting FluentAssertions.xml
+Getting Fonts
+Getting Infragistics2.Excel.v10.1.dll
+Getting Infragistics2.Excel.v10.1.xml
+Getting Infragistics2.Shared.v10.1.dll
+Getting Infragistics2.Shared.v10.1.XML
+Getting Infragistics2.Win.AppStylistSupport.v10.1.dll
+Getting Infragistics2.Win.AppStylistSupport.v10.1.xml
+Getting Infragistics2.Win.Misc.v10.1.dll
+Getting Infragistics2.Win.Misc.v10.1.xml
+Getting Infragistics2.Win.UltraWinChart.v10.1.dll
+Getting Infragistics2.Win.UltraWinChart.v10.1.XML
+Getting Infragistics2.Win.UltraWinDataSource.v10.1.dll
+Getting Infragistics2.Win.UltraWinDataSource.v10.1.XML
+Getting Infragistics2.Win.UltraWinDock.v10.1.dll
+Getting Infragistics2.Win.UltraWinDock.v10.1.xml
+Getting Infragistics2.Win.UltraWinEditors.v10.1.dll
+Getting Infragistics2.Win.UltraWinEditors.v10.1.xml
+Getting Infragistics2.Win.UltraWinExplorerBar.v10.1.dll
+Getting Infragistics2.Win.UltraWinExplorerBar.v10.1.XML
+Getting Infragistics2.Win.UltraWinGrid.ExcelExport.v10.1.dll
+Getting Infragistics2.Win.UltraWinGrid.ExcelExport.v10.1.XML
+Getting Infragistics2.Win.UltraWinGrid.v10.1.dll
+Getting Infragistics2.Win.UltraWinGrid.v10.1.XML
+Getting Infragistics2.Win.UltraWinListView.v10.1.dll
+Getting Infragistics2.Win.UltraWinListView.v10.1.XML
+Getting Infragistics2.Win.UltraWinStatusBar.v10.1.dll
+Getting Infragistics2.Win.UltraWinStatusBar.v10.1.xml
+Getting Infragistics2.Win.UltraWinTabbedMdi.v10.1.dll
+Getting Infragistics2.Win.UltraWinTabbedMdi.v10.1.xml
+Getting Infragistics2.Win.UltraWinTabControl.v10.1.dll
+Getting Infragistics2.Win.UltraWinTabControl.v10.1.xml
+Getting Infragistics2.Win.UltraWinToolbars.v10.1.dll
+Getting Infragistics2.Win.UltraWinToolbars.v10.1.xml
+Getting Infragistics2.Win.UltraWinTree.v10.1.dll
+Getting Infragistics2.Win.UltraWinTree.v10.1.XML
+Getting Infragistics2.Win.v10.1.Design.dll
+Getting Infragistics2.Win.v10.1.Design.XML
+Getting Infragistics2.Win.v10.1.dll
+Getting Infragistics2.Win.v10.1.XML
+Getting Infragistics35.Web.v8.2.dll
+Getting Infragistics35.Web.v8.2.xml
+Getting Interop.Cscabsv.dll
+Getting Interop.SHDocVw.dll
+Getting Interop.UnderCoverLib.dll
+Getting Ionic.Zip.dll
+Getting log4net.dll
+Getting log4net.xml
+Getting MemoryMappedFileStream.dll
+Getting Moq.dll
+Getting Neodynamic.WinControls.BarcodeProfessional.dll
+Getting Neodynamic.WinControls.BarcodeProfessional.xml
+Getting Newtonsoft.Json.dll
+Getting NSIS
+Getting NUnit
+Getting NUnitForms.dll
+Getting PDFViewerLib.dll
+Getting Platform.LocatorData.dll
+Getting PrintData.dll
+Getting PrintDataProxyInterface.dll
+Getting PrintDiagOvr.dll
+Getting PrintDiagOvr.dll.log4net
+Getting PrintDiagOvr.pdb
+Getting RIAPlatformWSEInterface.dll
+Getting RoleMCc.dll
+Getting Sax.Barcodes.dll
+Getting SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
+Getting SD.LLBLGen.Pro.DQE.SqlServer.NET20.xml
+Getting SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
+Getting SD.LLBLGen.Pro.ORMSupportClasses.NET20.xml
+Getting SMO
+Getting syncfusion.core.dll
+Getting syncfusion.diagram.base.dll
+Getting Syncfusion.Diagram.Windows.dll
+Getting syncfusion.edit.windows.dll
+Getting syncfusion.shared.base.dll
+Getting syncfusion.shared.windows.dll
+Getting syncfusion.shared.windows.xml
+Getting TaxApp.UserFunctions.dll
+Getting Thomson.Ria.TaxApp.UserFunctions.dll
+Getting TransportSettings.dll
+Getting undercoverappender.dll
+Getting wPDF3.dll
+Getting wPDFControl03.dll
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\dotNET:
+Getting dotnetfx35setup.exe
+Getting dotNetFx40_Full_setup.exe
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\Fonts:
+Getting CLR_Dingbats.TTF
+Getting clr_ocrb.ttf
+Getting Clrbar25.ttf
+Getting Clrbar39.ttf
+Getting clrbold.ttf
+Getting clrcdb30.ttf
+Getting clrdemi.ttf
+Getting clri2520.ttf
+Getting clrroman.ttf
+Getting clrrule.ttf
+Getting clrvarb.ttf
+Getting OCR_A_Extended.TTF
+Getting OCR_A_MT.TTF
+Getting ocrb____.ttf
+Getting RIASYM.ttf
+Getting UNIVE2.TTF
+Getting UNIVE3.TTF
+Getting Univers_55_Normal.TTF
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS:
+Getting Bin
+Getting Contrib
+Getting COPYING
+Getting Docs
+Getting Examples
+Getting Include
+Getting makensis.exe
+Getting makensisw.exe
+Getting Menu
+Getting NSIS.chm
+Getting NSIS.exe
+Getting nsisconf.nsh
+Getting Plugins
+Getting Stubs
+Getting uninst-nsis.exe
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Bin:
+Getting GenPat.exe
+Getting LibraryLocal.exe
+Getting MakeLangId.exe
+Getting RegTool.bin
+Getting zip2exe.exe
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib:
+Getting Graphics
+Getting Language files
+Getting Modern UI
+Getting Modern UI 2
+Getting UIs
+Getting zip2exe
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Graphics:
+Getting Checks
+Getting Header
+Getting Icons
+Getting Wizard
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Graphics\Checks:
+Getting big.bmp
+Getting classic.bmp
+Getting classic-cross.bmp
+Getting colorful.bmp
+Getting grey.bmp
+Getting grey-cross.bmp
+Getting modern.bmp
+Getting red.bmp
+Getting red-round.bmp
+Getting simple.bmp
+Getting simple-round.bmp
+Getting simple-round2.bmp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Graphics\Header:
+Getting nsis.bmp
+Getting nsis-r.bmp
+Getting orange.bmp
+Getting orange-nsis.bmp
+Getting orange-r.bmp
+Getting orange-r-nsis.bmp
+Getting orange-uninstall.bmp
+Getting orange-uninstall-nsis.bmp
+Getting orange-uninstall-r.bmp
+Getting orange-uninstall-r-nsis.bmp
+Getting win.bmp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Graphics\Icons:
+Getting arrow2-install.ico
+Getting arrow2-uninstall.ico
+Getting arrow-install.ico
+Getting arrow-uninstall.ico
+Getting box-install.ico
+Getting box-uninstall.ico
+Getting classic-install.ico
+Getting classic-uninstall.ico
+Getting llama-blue.ico
+Getting llama-grey.ico
+Getting modern-install.ico
+Getting modern-install-blue.ico
+Getting modern-install-blue-full.ico
+Getting modern-install-colorful.ico
+Getting modern-install-full.ico
+Getting modern-uninstall.ico
+Getting modern-uninstall-blue.ico
+Getting modern-uninstall-blue-full.ico
+Getting modern-uninstall-colorful.ico
+Getting modern-uninstall-full.ico
+Getting nsis1-install.ico
+Getting nsis1-uninstall.ico
+Getting orange-install.ico
+Getting orange-install-nsis.ico
+Getting orange-uninstall.ico
+Getting orange-uninstall-nsis.ico
+Getting pixel-install.ico
+Getting pixel-uninstall.ico
+Getting win-install.ico
+Getting win-uninstall.ico
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Graphics\Wizard:
+Getting arrow.bmp
+Getting llama.bmp
+Getting nsis.bmp
+Getting nullsoft.bmp
+Getting orange.bmp
+Getting orange-nsis.bmp
+Getting orange-uninstall.bmp
+Getting orange-uninstall-nsis.bmp
+Getting win.bmp
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Language files:
+Getting Afrikaans.nlf
+Getting Afrikaans.nsh
+Getting Albanian.nlf
+Getting Albanian.nsh
+Getting Arabic.nlf
+Getting Arabic.nsh
+Getting Basque.nlf
+Getting Basque.nsh
+Getting Belarusian.nlf
+Getting Belarusian.nsh
+Getting Bosnian.nlf
+Getting Bosnian.nsh
+Getting Breton.nlf
+Getting Breton.nsh
+Getting Bulgarian.nlf
+Getting Bulgarian.nsh
+Getting Catalan.nlf
+Getting Catalan.nsh
+Getting Croatian.nlf
+Getting Croatian.nsh
+Getting Czech.nlf
+Getting Czech.nsh
+Getting Danish.nlf
+Getting Danish.nsh
+Getting Dutch.nlf
+Getting Dutch.nsh
+Getting English.nlf
+Getting English.nsh
+Getting Esperanto.nlf
+Getting Esperanto.nsh
+Getting Estonian.nlf
+Getting Estonian.nsh
+Getting Farsi.nlf
+Getting Farsi.nsh
+Getting Finnish.nlf
+Getting Finnish.nsh
+Getting French.nlf
+Getting French.nsh
+Getting Galician.nlf
+Getting Galician.nsh
+Getting German.nlf
+Getting German.nsh
+Getting Greek.nlf
+Getting Greek.nsh
+Getting Hebrew.nlf
+Getting Hebrew.nsh
+Getting Hungarian.nlf
+Getting Hungarian.nsh
+Getting Icelandic.nlf
+Getting Icelandic.nsh
+Getting Indonesian.nlf
+Getting Indonesian.nsh
+Getting Irish.nlf
+Getting Irish.nsh
+Getting Italian.nlf
+Getting Italian.nsh
+Getting Japanese.nlf
+Getting Japanese.nsh
+Getting Korean.nlf
+Getting Korean.nsh
+Getting Kurdish.nlf
+Getting Kurdish.nsh
+Getting Latvian.nlf
+Getting Latvian.nsh
+Getting Lithuanian.nlf
+Getting Lithuanian.nsh
+Getting Luxembourgish.nlf
+Getting Luxembourgish.nsh
+Getting Macedonian.nlf
+Getting Macedonian.nsh
+Getting Malay.nlf
+Getting Malay.nsh
+Getting Mongolian.nlf
+Getting Mongolian.nsh
+Getting Norwegian.nlf
+Getting Norwegian.nsh
+Getting NorwegianNynorsk.nlf
+Getting NorwegianNynorsk.nsh
+Getting Polish.nlf
+Getting Polish.nsh
+Getting Portuguese.nlf
+Getting Portuguese.nsh
+Getting PortugueseBR.nlf
+Getting PortugueseBR.nsh
+Getting Romanian.nlf
+Getting Romanian.nsh
+Getting Russian.nlf
+Getting Russian.nsh
+Getting Serbian.nlf
+Getting Serbian.nsh
+Getting SerbianLatin.nlf
+Getting SerbianLatin.nsh
+Getting SimpChinese.nlf
+Getting SimpChinese.nsh
+Getting Slovak.nlf
+Getting Slovak.nsh
+Getting Slovenian.nlf
+Getting Slovenian.nsh
+Getting Spanish.nlf
+Getting Spanish.nsh
+Getting SpanishInternational.nlf
+Getting SpanishInternational.nsh
+Getting Swedish.nlf
+Getting Swedish.nsh
+Getting Thai.nlf
+Getting Thai.nsh
+Getting TradChinese.nlf
+Getting TradChinese.nsh
+Getting Turkish.nlf
+Getting Turkish.nsh
+Getting Ukrainian.nlf
+Getting Ukrainian.nsh
+Getting Uzbek.nlf
+Getting Uzbek.nsh
+Getting Welsh.nlf
+Getting Welsh.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Modern UI:
+Getting ioSpecial.ini
+Getting System.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Modern UI 2:
+Getting Deprecated.nsh
+Getting Interface.nsh
+Getting Localization.nsh
+Getting MUI2.nsh
+Getting Pages
+Getting Pages.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\Modern UI 2\Pages:
+Getting Components.nsh
+Getting Directory.nsh
+Getting Finish.nsh
+Getting InstallFiles.nsh
+Getting License.nsh
+Getting StartMenu.nsh
+Getting UninstallConfirm.nsh
+Getting Welcome.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\UIs:
+Getting default.exe
+Getting modern.exe
+Getting modern_headerbmp.exe
+Getting modern_headerbmpr.exe
+Getting modern_nodesc.exe
+Getting modern_smalldesc.exe
+Getting sdbarker_tiny.exe
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Contrib\zip2exe:
+Getting Base.nsh
+Getting Classic.nsh
+Getting Modern.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs:
+Getting AdvSplash
+Getting Banner
+Getting BgImage
+Getting Dialer
+Getting InstallOptions
+Getting makensisw
+Getting Math
+Getting Modern UI
+Getting Modern UI 2
+Getting MultiUser
+Getting nsDialogs
+Getting nsExec
+Getting NSISdl
+Getting Splash
+Getting StartMenu
+Getting StrFunc
+Getting System
+Getting VPatch
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\AdvSplash:
+Getting advsplash.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Banner:
+Getting Readme.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\BgImage:
+Getting BgImage.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Dialer:
+Getting Dialer.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\InstallOptions:
+Getting Changelog.txt
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\makensisw:
+Getting License.txt
+Getting Readme.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Math:
+Getting Math.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Modern UI:
+Getting Changelog.txt
+Getting images
+Getting License.txt
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Modern UI\images:
+Getting closed.gif
+Getting header.gif
+Getting open.gif
+Getting screen1.png
+Getting screen2.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Modern UI 2:
+Getting images
+Getting License.txt
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Modern UI 2\images:
+Getting closed.gif
+Getting header.gif
+Getting open.gif
+Getting screen1.png
+Getting screen2.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\MultiUser:
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\nsDialogs:
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\nsExec:
+Getting nsExec.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\NSISdl:
+Getting License.txt
+Getting ReadMe.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\Splash:
+Getting splash.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\StartMenu:
+Getting Readme.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\StrFunc:
+Getting StrFunc.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\System:
+Getting System.html
+Getting WhatsNew.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Docs\VPatch:
+Getting Readme.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples:
+Getting AdvSplash
+Getting Banner
+Getting BgImage
+Getting bigtest.nsi
+Getting example1.nsi
+Getting example2.nsi
+Getting FileFunc.ini
+Getting FileFunc.nsi
+Getting FileFuncTest.nsi
+Getting gfx.nsi
+Getting InstallOptions
+Getting languages.nsi
+Getting Library.nsi
+Getting LogicLib.nsi
+Getting makensis.nsi
+Getting Math
+Getting Memento.nsi
+Getting Modern UI
+Getting nsDialogs
+Getting nsExec
+Getting one-section.nsi
+Getting Plugin
+Getting primes.nsi
+Getting rtest.nsi
+Getting silent.nsi
+Getting Splash
+Getting StartMenu
+Getting StrFunc.nsi
+Getting System
+Getting TextFunc.ini
+Getting TextFunc.nsi
+Getting TextFuncTest.nsi
+Getting UserInfo
+Getting UserVars.nsi
+Getting VersionInfo.nsi
+Getting viewhtml.nsi
+Getting VPatch
+Getting waplugin.nsi
+Getting WordFunc.ini
+Getting WordFunc.nsi
+Getting WordFuncTest.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\AdvSplash:
+Getting Example.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Banner:
+Getting Example.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\BgImage:
+Getting Example.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\InstallOptions:
+Getting test.ini
+Getting test.nsi
+Getting testimgs.ini
+Getting testimgs.nsi
+Getting testlink.ini
+Getting testlink.nsi
+Getting testnotify.ini
+Getting testnotify.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Math:
+Getting math.nsi
+Getting mathtest.ini
+Getting mathtest.nsi
+Getting mathtest.txt
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Modern UI:
+Getting Basic.nsi
+Getting HeaderBitmap.nsi
+Getting MultiLanguage.nsi
+Getting StartMenu.nsi
+Getting WelcomeFinish.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\nsDialogs:
+Getting example.nsi
+Getting InstallOptions.nsi
+Getting timer.nsi
+Getting welcome.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\nsExec:
+Getting test.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Plugin:
+Getting exdll.c
+Getting exdll.dpr
+Getting exdll.dsp
+Getting exdll.dsw
+Getting exdll_with_unit.dpr
+Getting exdll-vs2008.sln
+Getting exdll-vs2008.vcproj
+Getting extdll.inc
+Getting nsis
+Getting nsis.pas
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Plugin\nsis:
+Getting api.h
+Getting pluginapi.h
+Getting pluginapi.lib
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\Splash:
+Getting Example.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\StartMenu:
+Getting Example.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\System:
+Getting Resource.dll
+Getting SysFunc.nsh
+Getting System.nsh
+Getting System.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\UserInfo:
+Getting UserInfo.nsi
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Examples\VPatch:
+Getting example.nsi
+Getting newfile.txt
+Getting oldfile.txt
+Getting patch.pat
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Include:
+Getting Colors.nsh
+Getting DotNetVer.nsh
+Getting FileFunc.nsh
+Getting InstallOptions.nsh
+Getting LangFile.nsh
+Getting Library.nsh
+Getting LogicLib.nsh
+Getting Memento.nsh
+Getting MUI.nsh
+Getting MUI2.nsh
+Getting MultiUser.nsh
+Getting nsDialogs.nsh
+Getting Sections.nsh
+Getting StrFunc.nsh
+Getting TextFunc.nsh
+Getting UpgradeDLL.nsh
+Getting Util.nsh
+Getting VB6RunTime.nsh
+Getting VPatchLib.nsh
+Getting Win
+Getting WinCore.nsh
+Getting WinMessages.nsh
+Getting WinVer.nsh
+Getting WordFunc.nsh
+Getting x64.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Include\Win:
+Getting WinDef.nsh
+Getting WinError.nsh
+Getting WinNT.nsh
+Getting WinUser.nsh
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Menu:
+Getting images
+Getting index.html
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Menu\images:
+Getting header.gif
+Getting line.gif
+Getting site.gif
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Plugins:
+Getting AdvSplash.dll
+Getting Banner.dll
+Getting BgImage.dll
+Getting Dialer.dll
+Getting InstallOptions.dll
+Getting LangDLL.dll
+Getting Math.dll
+Getting nsDialogs.dll
+Getting nsExec.dll
+Getting NSISdl.dll
+Getting Splash.dll
+Getting StartMenu.dll
+Getting System.dll
+Getting TypeLib.dll
+Getting UserInfo.dll
+Getting VPatch.dll
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NSIS\Stubs:
+Getting bzip2
+Getting bzip2_solid
+Getting lzma
+Getting lzma_solid
+Getting uninst
+Getting zlib
+Getting zlib_solid
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NUnit:
+Getting addins
+Getting framework
+Getting lib
+Getting nunit.exe
+Getting nunit.exe.config
+Getting nunit-agent.exe
+Getting nunit-agent.exe.config
+Getting nunit-agent-x86.exe
+Getting nunit-agent-x86.exe.config
+Getting nunit-console.exe
+Getting nunit-console.exe.config
+Getting nunit-console-x86.exe
+Getting nunit-console-x86.exe.config
+Getting nunit-x86.exe
+Getting nunit-x86.exe.config
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NUnit\framework:
+Getting nunit.framework.dll
+Getting nunit.framework.xml
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\NUnit\lib:
+Getting Failure.png
+Getting fit.dll
+Getting Ignored.png
+Getting Inconclusive.png
+Getting log4net.dll
+Getting nunit.core.dll
+Getting nunit.core.interfaces.dll
+Getting nunit.fixtures.dll
+Getting nunit.uiexception.dll
+Getting nunit.uikit.dll
+Getting nunit.util.dll
+Getting nunit-console-runner.dll
+Getting nunit-gui-runner.dll
+Getting Skipped.png
+Getting Success.png
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\Libraries\SMO:
+Getting SharedManagementObjects.msi
+Getting SQLSysClrTypes.msi
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/TaxBuilder/Libraries -noprompt -version:D2013-08-13T20:57:35Z~D2013-08-13T22:09:32Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" get .\./BuildAndDeploy/JobFiles -recursive -noprompt ********
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\BuildAndDeploy:
+Getting JobFiles
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\BuildAndDeploy\JobFiles:
+Getting CommonAssemblyInfo.yml
+Getting CreateDesignerPackage.rb
+Getting CreateRuntimeClientPackage.rb
+Getting CreateRuntimePdbPackage.rb
+Getting CreateRuntimeServerPackage.rb
+Getting CreateRuntimeTypeLibrariesPackage.rb
+Getting CreateRuntimeWebServicePackage.rb
+Getting CreateSampleCenterPackage.rb
+Getting HaspOverrideAssemblyInfo.yml
+Getting Packages
+Getting SampleCenterAssemblyInfo.yml
+
+C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA\BuildAndDeploy\JobFiles\Packages:
+Getting designerPackage.yml
+Getting runtimeClientPackage.yml
+Getting runtimePdbPackage.yml
+Getting runtimeServerPackage.yml
+Getting runtimeTypeLibrariesPackage.yml
+Getting runtimeWebServicePackage.yml
+[JobA] $ "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe" history $/TaxBuilder/Mainline/TaxBuilder/BuildAndDeploy/JobFiles -noprompt -version:D2013-08-13T20:57:35Z~D2013-08-13T22:09:32Z -recursive -format:detailed -server:http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection ********
+No history entries were found for the item and version combination specified.
+Finished: SUCCESS

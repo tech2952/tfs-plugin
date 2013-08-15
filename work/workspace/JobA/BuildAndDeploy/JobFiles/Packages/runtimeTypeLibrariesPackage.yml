@@ -1,0 +1,43 @@
+--- !ruby/object:Package 
+name: RuntimeTypeLibraries
+solutions: 
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: TaxBuilder
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.BusinessLogic
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: GenPrintWithKeys
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: PrintRuntime.GenPrint
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: PrintClient
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: ShellApplication
+    shouldDeploy: true

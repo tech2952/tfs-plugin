@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Group-Id: org.jenkins-ci.plugins
+Short-Name: tfs
+Long-Name: Team Foundation Server Plug-in
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Team+Foundation+Server
+ +Plugin
+Plugin-Version: 1.21-Custom
+Hudson-Version: 1.520
+Jenkins-Version: 1.520
+Plugin-Dependencies: ui-samples-plugin:1.520
+Plugin-Developers: Erik Ramfelt:redsolo:eramfelt@gmail.com,Tech2952::t
+ ech2952@gmail.com
+Libraries: C:\Users\U0170931\Documents\GitHub\tfs-plugin\target\classes
+Resource-Path: C:\Users\U0170931\Documents\GitHub\tfs-plugin\src\main\
+ webapp
+

@@ -1,0 +1,18 @@
+Number of arguments: 7
+ServerName = "(local)\sqlexpress"
+Database Name = PATRICKHENRY
+Source Dir: D:\Thomson\TaxBuilder\Database\TestHarness\
+Database Directory: D:\Thomson\TaxBuilder\Database\TestHarness
+11010
+User Name: sa
+Password is populated
+connection string parms: UseTrusted; ServerName: "(local)\sqlexpress"
+Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=master;Data Source="(local)\sqlexpress"
+Database does not exist: Creating
+oSqL.exe -S"(local)\sqlexpress" -dPATRICKHENRY -i"D:\Thomson\TaxBuilder\Database\TestHarness\UserDefinedDatatypes.sql" -o"D:\Thomson\TaxBuilder\Database\TestHarness\PatrickHenry_UDT.txt" -E
+Create Tables script ran, please view REVERE_UserDDT.txt for output
+oSqL.exe -S"(local)\sqlexpress" -dPATRICKHENRY -i"D:\Thomson\TaxBuilder\Database\TestHarness\TaxBuilderRuntimeTables.sql" -o"D:\Thomson\TaxBuilder\Database\TestHarness\PatrickHenry_Tables.txt" -E
+Create Tables script ran, please view PatrickHenry_Tables.txt for output
+oSqL.exe -S"(local)\sqlexpress" -dPATRICKHENRY -i"D:\Thomson\TaxBuilder\Database\TestHarness\TaxBuilderRuntimeProcs.sql" -o"D:\Thomson\TaxBuilder\Database\TestHarness\PatrickHenry_Procs.txt" -E
+Create Procs script ran, please view PatrickHenry_Procs.txt for output
+Log Ended: 8/26/2010 3:09:20 PM

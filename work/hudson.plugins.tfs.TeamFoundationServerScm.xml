@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.tfs.TeamFoundationServerScm_-DescriptorImpl>
+  <generation>2</generation>
+  <tfExecutable>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\tf.exe</tfExecutable>
+</hudson.plugins.tfs.TeamFoundationServerScm_-DescriptorImpl>

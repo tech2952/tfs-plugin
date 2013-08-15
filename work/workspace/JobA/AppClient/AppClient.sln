@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxApp.WinformRuntimeGraphics", "TaxApp.WinformRuntimeGraphics\TaxApp.WinformRuntimeGraphics.csproj", "{0CC68F00-E159-4CF6-A828-E65C0D0C9E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxApp.InterfacesAndConstants", "TaxApp.InterfacesAndConstants\TaxApp.InterfacesAndConstants.csproj", "{943C93FD-BA49-4A52-A46D-C173DD386D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness.DataObjects", "TaxApp.DataObjects\TestHarness.DataObjects.csproj", "{6D04E081-E001-400B-9355-FD91A8BD068E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness.BusinessObjects", "TestHarness.BusinessObjects\TestHarness.BusinessObjects.csproj", "{1BD91219-8B2E-4913-B091-AFFB47917038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness.CABModule", "TestHarness.CABModule\TestHarness.CABModule.csproj", "{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness.ShellDirectToDB", "TestHarness.ShellDirectToDB\TestHarness.ShellDirectToDB.csproj", "{5BCA95F5-54E7-460C-AFDA-1C992582C3BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxAppClient.BusinessObjects", "TaxAppClient.BusinessObjects\TaxAppClient.BusinessObjects.csproj", "{1E1B383E-91B2-48C1-92D2-CDEF27353523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxAppClient.Shell", "TaxAppClient.Shell\TaxAppClient.Shell.csproj", "{EE83A660-91CB-47FC-974F-D2F6A0115612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxAppClient.WCFService", "TaxAppClient.WCFService\TaxAppClient.WCFService.csproj", "{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxAppClient.WCFServiceHost", "TaxAppClient.WCFServiceHost\TaxAppClient.WCFServiceHost.csproj", "{E42772AA-B685-485F-8022-3FBC2C6CA335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness.Fitness", "TestHarness.Fitness\TestHarness.Fitness.csproj", "{2CF0EFF5-89E9-445A-86E2-46311B65DB78}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfstta.int.thomson.com:8081/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TaxApp.DataObjects\\TestHarness.DataObjects.csproj
+		SccProjectName1 = TaxApp.DataObjects
+		SccLocalPath1 = TaxApp.DataObjects
+		SccProjectUniqueName2 = TaxApp.InterfacesAndConstants\\TaxApp.InterfacesAndConstants.csproj
+		SccProjectName2 = TaxApp.InterfacesAndConstants
+		SccLocalPath2 = TaxApp.InterfacesAndConstants
+		SccProjectUniqueName3 = TaxApp.WinformRuntimeGraphics\\TaxApp.WinformRuntimeGraphics.csproj
+		SccProjectName3 = TaxApp.WinformRuntimeGraphics
+		SccLocalPath3 = TaxApp.WinformRuntimeGraphics
+		SccProjectUniqueName4 = TaxAppClient.BusinessObjects\\TaxAppClient.BusinessObjects.csproj
+		SccProjectName4 = TaxAppClient.BusinessObjects
+		SccLocalPath4 = TaxAppClient.BusinessObjects
+		SccProjectUniqueName5 = TaxAppClient.Shell\\TaxAppClient.Shell.csproj
+		SccProjectName5 = TaxAppClient.Shell
+		SccLocalPath5 = TaxAppClient.Shell
+		SccProjectUniqueName6 = TaxAppClient.WCFService\\TaxAppClient.WCFService.csproj
+		SccProjectName6 = TaxAppClient.WCFService
+		SccLocalPath6 = TaxAppClient.WCFService
+		SccProjectUniqueName7 = TaxAppClient.WCFServiceHost\\TaxAppClient.WCFServiceHost.csproj
+		SccProjectName7 = TaxAppClient.WCFServiceHost
+		SccLocalPath7 = TaxAppClient.WCFServiceHost
+		SccProjectUniqueName8 = TestHarness.BusinessObjects\\TestHarness.BusinessObjects.csproj
+		SccProjectName8 = TestHarness.BusinessObjects
+		SccLocalPath8 = TestHarness.BusinessObjects
+		SccProjectUniqueName9 = TestHarness.CABModule\\TestHarness.CABModule.csproj
+		SccProjectName9 = TestHarness.CABModule
+		SccLocalPath9 = TestHarness.CABModule
+		SccProjectUniqueName10 = TestHarness.Fitness\\TestHarness.Fitness.csproj
+		SccProjectName10 = TestHarness.Fitness
+		SccLocalPath10 = TestHarness.Fitness
+		SccProjectUniqueName11 = TestHarness.ShellDirectToDB\\TestHarness.ShellDirectToDB.csproj
+		SccProjectName11 = TestHarness.ShellDirectToDB
+		SccLocalPath11 = TestHarness.ShellDirectToDB
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CC68F00-E159-4CF6-A828-E65C0D0C9E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC68F00-E159-4CF6-A828-E65C0D0C9E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC68F00-E159-4CF6-A828-E65C0D0C9E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC68F00-E159-4CF6-A828-E65C0D0C9E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943C93FD-BA49-4A52-A46D-C173DD386D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943C93FD-BA49-4A52-A46D-C173DD386D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943C93FD-BA49-4A52-A46D-C173DD386D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943C93FD-BA49-4A52-A46D-C173DD386D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D04E081-E001-400B-9355-FD91A8BD068E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D04E081-E001-400B-9355-FD91A8BD068E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D04E081-E001-400B-9355-FD91A8BD068E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D04E081-E001-400B-9355-FD91A8BD068E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD91219-8B2E-4913-B091-AFFB47917038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD91219-8B2E-4913-B091-AFFB47917038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD91219-8B2E-4913-B091-AFFB47917038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD91219-8B2E-4913-B091-AFFB47917038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCA95F5-54E7-460C-AFDA-1C992582C3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCA95F5-54E7-460C-AFDA-1C992582C3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCA95F5-54E7-460C-AFDA-1C992582C3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCA95F5-54E7-460C-AFDA-1C992582C3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1B383E-91B2-48C1-92D2-CDEF27353523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1B383E-91B2-48C1-92D2-CDEF27353523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1B383E-91B2-48C1-92D2-CDEF27353523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1B383E-91B2-48C1-92D2-CDEF27353523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE83A660-91CB-47FC-974F-D2F6A0115612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE83A660-91CB-47FC-974F-D2F6A0115612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE83A660-91CB-47FC-974F-D2F6A0115612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE83A660-91CB-47FC-974F-D2F6A0115612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57D65BC-547B-4ABB-AF76-AE0D2AFE7D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E42772AA-B685-485F-8022-3FBC2C6CA335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42772AA-B685-485F-8022-3FBC2C6CA335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42772AA-B685-485F-8022-3FBC2C6CA335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E42772AA-B685-485F-8022-3FBC2C6CA335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF0EFF5-89E9-445A-86E2-46311B65DB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF0EFF5-89E9-445A-86E2-46311B65DB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF0EFF5-89E9-445A-86E2-46311B65DB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF0EFF5-89E9-445A-86E2-46311B65DB78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

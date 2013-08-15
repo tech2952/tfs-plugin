@@ -3,13 +3,13 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.424</version>
+    <version>1.505</version>
   </parent>
 
-  <artifactId>tfs</artifactId>
+  <artifactId>tfsMultiPath</artifactId>
   <packaging>hpi</packaging>
-  <name>Team Foundation Server Plug-in</name>
-  <version>1.21-SNAPSHOT</version>
+  <name>Team Foundation Server Multi Path Plug-in</name>
+  <version>1.21-Custom</version>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Team+Foundation+Server+Plugin</url>
   <licenses>
     <license><name>MIT license</name><comments>All source code is under the MIT license.</comments></license>
@@ -21,6 +21,11 @@
       <name>Erik Ramfelt</name>
       <email>eramfelt@gmail.com</email>
       <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id></id>
+      <name>Tech2952</name>
+      <email>tech2952@gmail.com</email>
     </developer>
   </developers>
   <scm>

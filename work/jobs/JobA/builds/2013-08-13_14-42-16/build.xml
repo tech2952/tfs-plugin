@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserCause>
+          <authenticationName>anonymous</authenticationName>
+        </hudson.model.Cause_-UserCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.plugins.tfs.model.WorkspaceConfiguration>
+      <workspaceName>Hudson-JobA-MASTER</workspaceName>
+      <workfolder>.</workfolder>
+      <projectPath>$/TaxBuilder/Mainline/Analytics : ./Analytics ; $/TaxBuilder/Mainline/Jenkins/JenkinsConnectionInfo: ./Analytics/JenkinsConnectionInfo</projectPath>
+      <serverUrl>http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection</serverUrl>
+      <workspaceExists>false</workspaceExists>
+    </hudson.plugins.tfs.model.WorkspaceConfiguration>
+  </actions>
+  <number>30</number>
+  <result>SUCCESS</result>
+  <duration>35007</duration>
+  <charset>windows-1252</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Users\U0170931\Documents\GitHub\tfs-plugin\work\workspace\JobA</workspace>
+  <hudsonVersion>1.424</hudsonVersion>
+  <scm class="hudson.plugins.tfs.ChangeSetReader"/>
+  <culprits/>
+</build>

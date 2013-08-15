@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE83A660-91CB-47FC-974F-D2F6A0115612}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxAppClient.Shell</RootNamespace>
+    <AssemblyName>TaxAppClient.Shell</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeUI, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Microsoft.Practices.CompositeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeUI.WinForms, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Microsoft.Practices.CompositeUI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\NUnit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thomson.CompositeUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Thomson.CompositeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thomson.CompositeUI.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Thomson.CompositeUI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Thomson.WinForms.Controls, Version=1.0.3104.26118, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Thomson.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Shared.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDock.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinDock.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinEditors.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinExplorerBar.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinStatusBar.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinTabControl.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinToolbars.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.UltraWinTree.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.1, Version=10.1.20101.1007, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.1\windows forms\bin\Infragistics2.Win.v10.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AboutBox1.designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShellMainForm.resx">
+      <DependentUpon>ShellMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkItems\Support\SupportView.resx">
+      <DependentUpon>SupportView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShellApplication.cs" />
+    <Compile Include="ShellMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShellMainForm.designer.cs">
+      <DependentUpon>ShellMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItems\Main\ShellWorkItem.cs" />
+    <Compile Include="WorkItems\Support\SupportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkItems\Support\SupportView.designer.cs">
+      <DependentUpon>SupportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItems\Support\SupportWorkItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProfileCatalog.TestHarness.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProfileCatalog.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cubes_green.png" />
+    <Content Include="Resources\cubes_yellow.png" />
+    <Content Include="Resources\nav_plain_blue.png" />
+    <Content Include="Resources\nav_plain_green.png" />
+    <Content Include="Resources\nav_plain_red.png" />
+    <Content Include="Resources\text_tree.png" />
+    <Content Include="Resources\user1_telephone16.png" />
+    <Content Include="Resources\user1_telephone48.png" />
+    <Content Include="Resources\window_earth.png" />
+    <Content Include="Resources\window_gear.png" />
+    <Content Include="Resources\window_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestHarness.CABModule\TestHarness.CABModule.csproj">
+      <Project>{A2E7AEEC-EDB8-4031-A7A1-A50B69E414D5}</Project>
+      <Name>TestHarness.CABModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

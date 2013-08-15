@@ -1,0 +1,253 @@
+--- !ruby/object:Package 
+name: Designer
+solutions: 
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: AppRuntime
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.CalcEngine
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.IntrinsicFunctions
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: TaxBuilder
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.ConsoleHost
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.BusinessLogic
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.FTCommonMCProxy
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.WCFProxy
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.NTService
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormImage.MetaFileDB
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: Platform.Snapshot
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: PrintRuntime.GenXmlPrintPages
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: PrintRuntime.GenPrint
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: GenPrintWithKeys
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.BuildLib
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.DesignToolIDE
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.BuildPrintRuntime
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.ConvertFadsConstants
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.ManifestEditor
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.TestLayout
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxBuilder.ViewRuntimeXmlPrintProperties
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: FormsImport
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: ConfigLogXmlLib
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: DbObjects
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormsImport
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: FormsImportClient
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: AppClient
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxApp.InterfacesAndConstants
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: PrintClient
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: GenPrintModule
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: PrintDataModule
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: ShellApplication
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: TaxFormRendering
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: Tests\PrintDataModule.Tests.NUnit
+    shouldDeploy: true
+  - !ruby/object:Project 
+    changes: []
+
+    name: Tests\TaxFormRendering.Tests.NUnit
+    shouldDeploy: true
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: DeploymentTools
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: Launcher
+    shouldDeploy: false
+  - !ruby/object:Project 
+    changes: []
+
+    name: ManifestBuilder
+    shouldDeploy: false
+  - !ruby/object:Project 
+    changes: []
+
+    name: Deployment.Domain
+    shouldDeploy: false
+  - !ruby/object:Project 
+    changes: []
+
+    name: QueryWorkItems
+    shouldDeploy: false
+  - !ruby/object:Project 
+    changes: []
+
+    name: StringArgs
+    shouldDeploy: false
+- !ruby/object:Solution 
+  changes: []
+
+  files: 
+  - !ruby/object:SolutionFile 
+    changes: []
+
+    name: Rakefile
+  name: HaspOverrideManager
+  projects: 
+  - !ruby/object:Project 
+    changes: []
+
+    name: HaspOverrideManager
+    shouldDeploy: true

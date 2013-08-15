@@ -1,0 +1,23 @@
+--- !ruby/object:AssemblyInfo
+OutputFile: CommonAssemblyInfo.cs
+Title: 
+Trademark:  
+Product:
+Company: Thomson Reuters
+Configuration: 
+Copyright: Copyright (c) 2006 - 2012
+Culture: 
+Description:
+File: !ruby/object:File {}
+
+FileVersion: !ruby/object:VersionInfo 
+  major: 2
+  minor: 4
+  patch: 0
+  build: 0
+
+Version: !ruby/object:VersionInfo 
+  major: 2
+  minor: 4
+  patch: 0
+  build: 0

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.tfs.TeamFoundationServerScm" plugin="tfs@1.21-Custom">
+    <serverUrl>http://tfstta-test.int.thomsonreuters.com:8080/tfs/DefaultCollection</serverUrl>
+    <projectPath>$/TaxBuilder/Mainline/TaxBuilder/AppClient: ./AppClient; $/TaxBuilder/Mainline/TaxBuilder/Libraries : ./Libraries ; $/TaxBuilder/Mainline/TaxBuilder/BuildAndDeploy/JobFiles : ./BuildAndDeploy/JobFiles ; $/TaxBuilder/Mainline/TaxBuilder/Database: ./Database ; $/TaxBuilder/Mainline/Jenkins/JenkinsConnectionInfo: ./AppClient/JenkinsConnectionInfo</projectPath>
+    <localPath>.</localPath>
+    <workspaceName>Hudson-${JOB_NAME}-${NODE_NAME}</workspaceName>
+    <userPassword>dEA1ZHRob20z</userPassword>
+    <userName>TLR\ta-s-dthome</userName>
+    <useUpdate>false</useUpdate>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers/>
+</project>

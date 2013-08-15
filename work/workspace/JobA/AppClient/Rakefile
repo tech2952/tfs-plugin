@@ -1,0 +1,172 @@
+$LOAD_PATH.unshift File.expand_path("./../../BuildAndDeploy/BuildTools")
+$LOAD_PATH.unshift File.expand_path("./../../BuildAndDeploy/BuildTools/Jenkins")
+$LOAD_PATH.unshift File.expand_path("./../../BuildAndDeploy/TestTools")
+$LOAD_PATH.unshift File.expand_path("\\\\cr-public-a01r\\DevToolsRepository\\BuildAndDeploy\\BuildTools")
+$LOAD_PATH.unshift File.expand_path("\\\\cr-public-a01r\\DevToolsRepository\\BuildAndDeploy\\BuildTools\\Jenkins")
+$LOAD_PATH.unshift File.expand_path("\\\\cr-public-a01r\\DevToolsRepository\\BuildAndDeploy\\TestTools")
+puts $LOAD_PATH
+
+require 'rake/clean'
+require 'FileUtils'
+require 'Jenkins'
+require 'AssemblyInfo'
+require 'MSBuild'
+require 'NUnit'
+require 'BuildOutput'
+require 'Package'
+require 'FileUtilsExtended'
+require 'NCover'
+require 'NCoverReport'
+
+@currentDir = nil
+@workspaceDir = nil
+@solutionFile = nil
+
+desc "Default local build task with tests."
+task :default => ["build:all"]
+
+desc "Build local without tests."
+task :quick => ["build:quick"]
+
+desc "Hudson build task. Default task + assembly versioning."
+task :hudson => ["build:hudson"]
+
+task :nocoverage => ["build:nocoverage"]
+
+desc "Local build task with assembly generation."
+task :impersonate => ["build:hudsontest"]
+
+namespace :build do
+	
+  task :all => [:clean, :setupvars, :build, :copy, :unit, :copytolibs]
+  task :quick => [:clean, :setupvars, :build, :copy]
+  task :hudson =>  [:clean, :setupvars, :versionassemblies, :copydependenciestolibs, :build, :copy, :test_coverage]
+  task :nocoverage =>  [:clean, :setupvars, :versionassemblies, :copydependenciestolibs, :build, :copy, :unit]
+  task :hudsontest =>  [:clean, :setupvars, :versionassemblies, :build, :copy, :unit, :copytolibs]
+  
+  desc "Setup directory variables"
+  task :setupvars do
+    
+    @currentDir = pwd
+    @currentDir.gsub!("/", "\\")
+    
+    cd ".."
+    @workspaceDir = pwd
+    @workspaceDir.gsub!("/", "\\")
+    
+    cd "#{@currentDir}"
+    @solutionFile = File.expand_path("#{@currentDir}\\AppClient.sln")
+    @solutionFile.gsub!("/", "\\")
+    
+    puts "*****************************"
+  end
+
+  task :versionassemblies do
+    @assemblyInfo = AssemblyInfo.new("").fromYaml("./../BuildAndDeploy/Jobfiles/CommonAssemblyInfo.yml")
+    @assemblyInfo.OutputFile = "#{@currentDir}/CommonAssemblyInfo.cs"
+    @assemblyInfo.Write()
+  end
+  
+  desc "Copy dependencies from artifacts to libraries for hudson builds"
+  task :copydependenciestolibs do
+    cd "#{@currentDir}"
+    
+    jenkins = Jenkins.new("#{ENV['HUDSON_HOME']}")
+    
+    buildOutput = BuildOutput.new("#{@currentDir}","")
+    buildOutput.SetFilesToReadWrite("#{@workspaceDir}/Libraries")
+    
+    sh "xcopy /y /e #{jenkins.Job("CompositeUI").LastGoodBuild().Archive("CompositeUI").Folder.gsub!("/", "\\")}\\Build\\Designer\\bin\\*.dll #{@workspaceDir}\\Libraries"
+		sh "xcopy /y /e #{jenkins.Job("TaxApp").LastGoodBuild().Archive("AppRuntime").Folder.gsub!("/", "\\")}\\Build\\Designer\\bin\\*.dll #{@workspaceDir}\\Libraries"
+		sh "xcopy /y /e #{jenkins.Job("TaxBuilder-Core").LastGoodBuild().Archive("TaxBuilder").Folder.gsub!("/", "\\")}\\Build\\Designer\\bin\\*.dll #{@workspaceDir}\\Libraries"
+		sh "xcopy /y /e #{jenkins.Job("FormsImport").LastGoodBuild().Archive("FormsImport").Folder.gsub!("/", "\\")}\\Build\\Designer\\bin\\*.dll #{@workspaceDir}\\Libraries"
+  end
+  
+  task :build do
+    msbuild = MSBuild.new()
+    msbuild.properties = "BuildConfiguration=Debug"
+    msbuild.project_file = "\"#{@solutionFile}\""
+    msbuild.Run()
+  end
+
+desc "Copy output to build directory."
+  task :copy do
+    cd "#{@currentDir}"
+    puts "Current directory - #{@currentDir}"
+    
+    designer = Package.new("Designer", Array.new()).fromFile("#{@workspaceDir}/BuildAndDeploy/JobFiles/Packages/designerPackage.yml")
+    runtimeClient = Package.new("RuntimeClient", Array.new()).fromFile("#{@workspaceDir}/BuildAndDeploy/JobFiles/Packages/runtimeClientPackage.yml")
+    
+    clean_dir("./Build")
+    
+    mkdir(".\\Build\\Designer")
+    mkdir(".\\Build\\Designer\\bin")
+    mkdir(".\\Build\\Runtime")
+    mkdir(".\\Build\\Runtime\\Client")
+    mkdir(".\\Build\\Runtime\\Client\\bin")
+    
+    FileUtils.cp("#{@workspaceDir}/BuildAndDeploy/JobFiles/Packages/designerPackage.yml", "#{@currentDir}/Build/Designer/", :verbose => true)
+    FileUtils.cp("#{@workspaceDir}/BuildAndDeploy/JobFiles/Packages/runtimeClientPackage.yml", "#{@currentDir}/Build/Runtime/Client/", :verbose => true)
+    
+    designer.getProjectNamesForSolution("AppClient").each() do |project|
+      FileUtils.cp_r("./#{project}/bin/Debug/.", "./Build/Designer/bin")
+    end
+    
+    runtimeClient.getProjectNamesForSolution("AppClient").each() do |project|
+      FileUtils.cp_r("./#{project}/bin/Debug/.", "./Build/Runtime/Client/bin")
+    end
+    
+    testAssemblies = Array.new()
+    testAssemblies.push("TaxApp.InterfacesAndConstants",
+                                "TestHarness.BusinessObjects",
+                                "TaxAppClient.WCFService",
+                                "TaxApp.WinformRuntimeGraphics")
+                                
+    clean_dir("./Tests")
+    
+    testAssemblies.each() do |test|
+      FileUtils.cp_r("./#{test}/bin/Debug/.", "./Tests")
+    end
+    
+  end
+  
+  desc "Copy build output to libraries for local builds"
+  task :copytolibs do
+    cd "#{@currentDir}"
+    
+    buildOutput = BuildOutput.new("#{@currentDir}", "Debug")
+    buildOutput.CopyBinariesToLibraries("#{@currentDir}/Build", "#{@workspaceDir}/Libraries")
+  end
+  
+  task :unit do
+    nunit = NUnit.new( "./../../Libraries/NUnit", "nunit-console-x86.exe")
+    nunit.input_files = "TaxApp.WinformRuntimeGraphics.dll TaxApp.InterfacesAndConstants.dll" # TestHarness.BusinessObjects.dll TaxAppClient.WCFService.dll"
+    nunit.Run("#{@currentDir}/Tests")
+	end
+  
+  task :test_coverage do
+    NCOVER_DIR = "C:/Program Files (x86)/NCover"
+    NUNIT_DIR = "./../Libraries/NUnit"
+    INPUT_FILES = "TaxApp.WinformRuntimeGraphics.dll TaxApp.InterfacesAndConstants.dll" # TestHarness.BusinessObjects.dll TaxAppClient.WCFService.dll TestHarness.Fitness.dll
+    TEST_FOLDER = "./Tests"
+    
+    nunit = NUnit.new( NUNIT_DIR, "nunit-console-x86.exe" )
+
+    ncover = NCover.new( NCOVER_DIR )
+    ncover.test_runner = nunit.command
+    ncover.input_files = INPUT_FILES
+    ncover.include_assemblies = "TaxApp.InterfacesAndConstants.dll;TaxApp.WinformRuntimeGraphics.dll;TaxAppClient.BusinessObjects.dll;TaxAppClient.Shell.exe;"
+    ncover.include_assemblies += "TaxAppClient.WCFService.dll;TaxAppClient.WCFServiceHost.dll;TestHarness.BusinessObjects.dll;TestHarness.CABModule.dll;"
+    ncover.include_assemblies += "TestHarness.DataObjects.dll;TestHarness.Fitness.dll;TestHarness.ShellDirectToDB.dll"
+    ncover.Run( TEST_FOLDER )
+    
+    clean_dir("#{TEST_FOLDER}/Coverage")
+    FileUtils.cp("#{TEST_FOLDER}/Coverage.xml", "#{TEST_FOLDER}/Coverage")
+    
+    ncover_report = NCoverReport.new( NCOVER_DIR )
+    ncover_report.project_name = "AppClient"
+    ncover_report.coverage_trend_path = "#{Jenkins.new(ENV['HUDSON_HOME']).Job("AppClient").Path}/ncover/Coverage.trend"
+    ncover_report.Run("#{TEST_FOLDER}/Coverage")
+  end
+  
+end
